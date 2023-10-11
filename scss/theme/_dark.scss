@@ -11,7 +11,7 @@ html.dark {
     --top-act-group-shadow: rgba(0, 0, 0, 0.2);
     --top-act-group-separate: #ededf6;
 
-    @include abstracts.breakPoint(lg) {
+    @include abstracts.breakpoint(lg) {
         --header-shadow-bg: rgba(0, 0, 0, 0.2);
     }
 
