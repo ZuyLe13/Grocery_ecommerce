@@ -11,7 +11,7 @@ html {
     --top-act-group-shadow: rgba(237, 237, 246, 0.2);
     --top-act-group-separate: #ededf6;
 
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
         --header-bg-color: #fff;
         --header-shadow-bg: rgba(237, 237, 246, 0.2);
     }
@@ -24,4 +24,21 @@ html {
     // Sidebar
     --sidebar-bg: #fff;
     --sidebar-shadow: rgba(200, 200, 200, 0.4);
+
+    // Category item
+    --cate-item-bg: #eee;
+    --cate-item-thumb-bg: #fff;
+    --cate-item-title-color: #000;
+
+    @include abstracts.screen(md) {
+        --cate-item-bg: #fff;
+    }
+
+    // Buttons
+    --filter-color-btn: #6c6c72;
+    --filter-btn-bg: #fff;
+
+    // Product card
+    --product-card-bg: #fff;
+    --product-card-shadow: rgba(237, 237, 246, 0.2);
 }

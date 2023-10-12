@@ -11,7 +11,7 @@ html.dark {
     --top-act-group-shadow: rgba(0, 0, 0, 0.2);
     --top-act-group-separate: #ededf6;
 
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
         --header-shadow-bg: rgba(0, 0, 0, 0.2);
     }
 
@@ -27,4 +27,17 @@ html.dark {
     // Sidebar
     --sidebar-bg: #292e39;
     --sidebar-shadow: rgba(23, 28, 40, 0.4);
+
+    // Category item
+    --cate-item-bg: #171c28;
+    --cate-item-thumb-bg: #292e39;
+    --cate-item-title-color: #fff;
+
+    // Buttons
+    --filter-color-btn: #fff;
+    --filter-btn-bg: #171c28;
+
+    // Product card
+    --product-card-bg: #171c28;
+    --product-card-shadow: rgba(0, 0, 0, 0.2);
 }
