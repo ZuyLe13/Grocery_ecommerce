@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="dark">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -30,7 +30,8 @@
             load("#header", "./templates/header.html");
         </script>
 
-        <div class="container home">
+        <!-- Main -->
+        <main class="container home">
             <!-- Slideshow -->
             <div class="home__container">
                 <div class="slideshow">
@@ -337,12 +338,12 @@
                     </div>
                 </div>
             </section>
+        </main>
 
-            <!-- Footer -->
-            <footer id="footer"></footer>
-            <script>
-                load("#footer", "./templates/footer.html");
-            </script>
-        </div>
+        <!-- Footer -->
+        <footer id="footer" class="footer"></footer>
+        <script>
+            load("#footer", "./templates/footer.html");
+        </script>
     </body>
 </html>
