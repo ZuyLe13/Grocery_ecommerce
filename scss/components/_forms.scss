@@ -1,10 +1,39 @@
+@use "../abstracts";
+
+$error-color: #ed4337;
+
 .form {
+    &:has(:invalid) &__submit-btn {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
     &__group {
         margin-top: 30px;
+
+        @include abstracts.screen(md) {
+            margin-top: 20px;
+        }
 
         &--inline {
             display: flex;
             align-items: center;
+        }
+    }
+
+    &__group:has(:invalid):has(&__input:not(:placeholder-shown)) {
+        .form__text-input {
+            border-color: $error-color;
+            background: rgba($color: $error-color, $alpha: 0.1);
+        }
+
+        .form__error,
+        .form__input-icon-error {
+            display: block;
+        }
+
+        .form__input-icon {
+            display: none;
         }
     }
 
@@ -21,6 +50,10 @@
         &:focus-within {
             border-color: #77dae6;
         }
+
+        @include abstracts.screen(md) {
+            height: 48px;
+        }
     }
 
     &__input {
@@ -36,8 +69,27 @@
         }
 
         &::placeholder {
-            color: #d2d1d6;
+            color: var(--form-placeholder-color);
         }
+
+        @include abstracts.screen(md) {
+            font-size: 1.6rem;
+        }
+    }
+
+    &__error {
+        text-align: left;
+        font-size: 1.4rem;
+        font-weight: 500;
+        margin-top: 10px;
+        color: $error-color;
+        display: none;
+    }
+
+    &__input-icon-error {
+        display: none;
+        margin-left: 12px;
+        animation: shake 0.5s;
     }
 
     &__pull-right {
@@ -45,14 +97,52 @@
     }
 
     &__checkbox {
+        position: relative;
+
         display: flex;
-        gap: 6px;
+        align-items: center;
+        user-select: none;
 
         &-label {
+            margin-left: 29px;
             font-size: 1.5rem;
             font-weight: 500;
             line-height: 146.667%;
             color: #9e9da8;
+
+            @include abstracts.screen(md) {
+                font-size: 1.4rem;
+            }
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+        }
+
+        &::before {
+            width: 19px;
+            height: 19px;
+            border-radius: 5px;
+            border: 2px solid #9e9da8;
+        }
+    }
+
+    &__checkbox:has(:checked) {
+        &::before {
+            border-color: #ffb700;
+            background: #ffb700;
+        }
+
+        &::after {
+            width: 14px;
+            height: 8px;
+            border: 3px solid;
+            border-color: transparent transparent #fff #fff;
+            rotate: -45deg;
+            left: 2px;
+            top: 4px;
         }
     }
 }
