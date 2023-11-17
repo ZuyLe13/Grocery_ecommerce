@@ -79,4 +79,14 @@ html {
 
     // Search Bar
     --search-bar-bg: #fff;
+
+    // Review Card
+    --review-card-bg: #fafafd;
+
+    @include abstracts.screen(md) {
+        --review-card-bg: #fff;
+    }
+
+    // Text Content
+    --text-content-hr-bg: #ebebeb;
 }
