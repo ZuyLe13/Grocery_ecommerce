@@ -103,12 +103,12 @@
                                         <article class="address-card">
                                             <div class="address-card__left">
                                                 <div class="address-card__choose">
-                                                    <label class="address-card__checkout">
+                                                    <label class="cart-info__checkbox">
                                                         <input
-                                                            type="checkbox"
-                                                            name=""
+                                                            type="radio"
+                                                            name="shipping-address"
                                                             checked
-                                                            class="address-card__checkout-input"
+                                                            class="cart-info__checkbox-input"
                                                         />
                                                     </label>
                                                 </div>
@@ -140,11 +140,11 @@
                                         <article class="address-card">
                                             <div class="address-card__left">
                                                 <div class="address-card__choose">
-                                                    <label class="address-card__checkout">
+                                                    <label class="cart-info__checkbox">
                                                         <input
-                                                            type="checkbox"
-                                                            name=""
-                                                            class="address-card__checkout-input"
+                                                            type="radio"
+                                                            name="shipping-address"
+                                                            class="cart-info__checkbox-input"
                                                         />
                                                     </label>
                                                 </div>
@@ -521,6 +521,7 @@
                                     type="text"
                                     name=""
                                     id="city"
+                                    readonly
                                     placeholder="City/District/Town"
                                     class="form__input js-toggle"
                                     toggle-target="#city-dialog"
@@ -537,7 +538,7 @@
                                         &times;
                                     </button>
                                     <div class="form__search">
-                                        <input type="text" placeholder="Seach" class="form__search-input" />
+                                        <input type="text" placeholder="Search" class="form__search-input" />
                                         <img src="./assets/icons/search.svg" alt="" class="form__search-icon icon" />
                                     </div>
                                     <ul class="form__options-list">
@@ -576,8 +577,8 @@
                         </div>
                         <div class="form__group form__group--inline">
                             <label class="form__checkbox">
-                                <input type="checkbox" name="" id="" class="form__checkbox-input d-none" />
-                                <span class="form__checkbox-label">Set as default address</span>
+                                <input type="radio" name="" id="" class="form__checkbox-input d-none" />
+                                <span class="formshipping-address__checkbox-label">Set as default address</span>
                             </label>
                         </div>
                     </div>
