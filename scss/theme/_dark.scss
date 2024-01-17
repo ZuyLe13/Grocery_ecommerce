@@ -11,7 +11,7 @@ html.dark {
     --footer-text-color: #9e9da6;
     --top-act-group-bg-color: #292e39;
     --top-act-group-shadow: rgba(0, 0, 0, 0.2);
-    --top-act-group-separate: #ededf6;
+    --top-act-group-separate: #61616a;
 
     @include abstracts.screen(lg) {
         --header-shadow-bg: rgba(0, 0, 0, 0.2);

@@ -36,10 +36,21 @@
         gap: 30px;
     }
 
+    &__back-arrow {
+        padding-right: 14px;
+    }
+
     &__heading {
+        display: flex;
+        align-items: center;
+
         font-size: 2.4rem;
         font-weight: 700;
         line-height: 141.667%;
+
+        @include abstracts.screen(lg) {
+            font-size: 2rem;
+        }
 
         &--lv2 {
             font-size: 2.2rem;

@@ -1354,7 +1354,7 @@ html.dark {
   --footer-text-color: #9e9da6;
   --top-act-group-bg-color: #292e39;
   --top-act-group-shadow: rgba(0, 0, 0, 0.2);
-  --top-act-group-separate: #ededf6;
+  --top-act-group-separate: #61616a;
   --header-act-dropdown-bg: #2f3441;
   --header-act-dropdown-shadow: rgba(23, 28, 40, 0.4);
   --header-act-dropdown-border-color: #171c28;
@@ -1480,7 +1480,7 @@ html {
   --dialog-shadow: rgba(237, 237, 246, 0.2);
   --profile-sidebar-bg: #fff;
   --profile-sidebar-shadow: rgba(237, 237, 246, 0.2);
-  --profile-sidebar-link-hover: #fbfbfb;
+  --profile-sidebar-link-hover: #ebebeb;
   --account-info-bg: #f6f6f6;
   --account-info-icon-bg: #fff;
   --separate-color: #d2d1d6;
@@ -1536,7 +1536,7 @@ html {
 
 .top-bar {
   position: relative;
-  padding: 30px 0;
+  padding: 20px 0;
   z-index: 1;
 }
 @media (max-width: 991.98px) {
@@ -1755,12 +1755,25 @@ html {
   height: 30px;
   background: var(--top-act-group-separate);
 }
+.top-act__user {
+  position: relative;
+}
+.top-act__user:hover .act-dropdown {
+  display: block;
+}
 .top-act__avatar {
   display: block;
   width: 50px;
   height: 50px;
   border-radius: 8px;
   cursor: pointer;
+}
+.top-act__dropdown {
+  right: -15px !important;
+  width: min(300px, 100vw) !important;
+}
+.top-act__dropdown-arrow {
+  right: 15px !important;
 }
 
 .nav-btn {
@@ -1889,6 +1902,41 @@ html {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 146.667%;
+}
+
+.user-menu__top {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.user-menu__avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.user-menu__name {
+  margin-bottom: 6px;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.user-menu__list {
+  margin-top: 30px;
+}
+.user-menu__link {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 0;
+}
+.user-menu__separate {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--separate-color);
+}
+.user-menu__icon {
+  width: 18px;
+  height: 18px;
 }
 
 .footer {
@@ -2076,7 +2124,7 @@ html {
   position: absolute;
   left: 0;
   width: min(1240px, 100%);
-  padding-top: 54px;
+  padding-top: 18px;
   display: none;
 }
 @media (max-width: 991.98px) {
@@ -2257,7 +2305,7 @@ html {
   position: relative;
   flex-shrink: 0;
   width: 100%;
-  padding-top: 34%;
+  padding-top: 26%;
 }
 @media (max-width: 767.98px) {
   .slideshow__item {
@@ -2329,7 +2377,7 @@ html {
   align-items: center;
   gap: 20px;
   height: 100%;
-  padding: 20px 26px;
+  padding: 20px;
   border-radius: 16px;
   background: var(--cate-item-bg);
 }
@@ -2344,8 +2392,9 @@ html {
   }
 }
 .cate-item__thumb {
-  width: 116px;
-  height: 116px;
+  display: block;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
   border-radius: 8px;
   background: var(--cate-item-thumb-bg);
@@ -2364,7 +2413,7 @@ html {
 }
 .cate-item__title {
   font-size: 2.2rem;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 145.455%;
   color: var(--cate-item-title-color);
 }
@@ -2768,7 +2817,7 @@ html {
 }
 .form__text-input {
   position: relative;
-  height: 50px;
+  height: 46px;
 }
 .form__text-input--small {
   height: 42px;
@@ -2958,13 +3007,14 @@ html {
   background: #ffb700;
 }
 .form__checkbox:has(:checked)::after {
-  width: 14px;
-  height: 8px;
+  width: 13px;
+  height: 7px;
+  rotate: -45deg;
+  left: 3px;
+  top: 5px;
   border: 3px solid;
   border-color: transparent transparent #fff #fff;
-  rotate: -45deg;
-  left: 2px;
-  top: 4px;
+  border-radius: 2px;
 }
 .form__label {
   display: block;
@@ -4014,10 +4064,20 @@ html {
   justify-content: space-between;
   gap: 30px;
 }
+.cart-info__back-arrow {
+  padding-right: 14px;
+}
 .cart-info__heading {
+  display: flex;
+  align-items: center;
   font-size: 2.4rem;
   font-weight: 700;
   line-height: 141.667%;
+}
+@media (max-width: 991.98px) {
+  .cart-info__heading {
+    font-size: 2rem;
+  }
 }
 .cart-info__heading--lv2 {
   font-size: 2.2rem;
@@ -4546,6 +4606,16 @@ html {
 }
 .profile__desc {
   margin-bottom: 16px;
+}
+
+.form-card__label {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+.form-card__bottom {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
 }
 
 /*# sourceMappingURL=main.css.map */

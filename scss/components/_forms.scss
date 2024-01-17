@@ -81,7 +81,7 @@ $error-color: #ed4337;
 
     &__text-input {
         position: relative;
-        height: 50px;
+        height: 46px;
 
         &--small {
             height: 42px;
@@ -299,13 +299,14 @@ $error-color: #ed4337;
         }
 
         &::after {
-            width: 14px;
-            height: 8px;
+            width: 13px;
+            height: 7px;
+            rotate: -45deg;
+            left: 3px;
+            top: 5px;
             border: 3px solid;
             border-color: transparent transparent #fff #fff;
-            rotate: -45deg;
-            left: 2px;
-            top: 4px;
+            border-radius: 2px;
         }
     }
 
